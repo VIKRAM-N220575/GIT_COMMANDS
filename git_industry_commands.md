@@ -239,3 +239,39 @@ Moves or renames a file and stages the change automatically.
 git mv oldfile.txt newfile.txt
 
 **Screenshots**
+![alt text](file_tracking_commands.png)
+
+## Commit Commands
+### 1. git commit
+**Syntax**
+git commit
+**Purpose**
+Records the staged changes in the repository as a new commit.
+This command opens the default text editor to write a commit message.
+**Example**
+git commit
+
+### 2. git commit -m
+**Syntax**
+git commit -m "commit message"
+**Purpose**
+Creates a commit and adds the commit message directly in the terminal.
+**Example**
+git commit -m "Added commit commands"
+
+### 3. git commit --amend
+**Syntax**
+git commit ammend
+**Purpose**
+Used to modify the most recent commit.
+You can change the commit message or add new changes to the last commit.
+**Example**
+git commit --amend test.txt
+
+### 4. git commit --no-edit
+**Syntax**
+git commit --amend --no-edit
+**Purpose**
+Updates the last commit without changing the commit message.
+**Example**
+git commit --amend --no-edit
