@@ -275,3 +275,325 @@ git commit --amend --no-edit
 Updates the last commit without changing the commit message.
 **Example**
 git commit --amend --no-edit
+
+
+### 6. Branch commands 
+1. git branch
+
+Syntax
+git branch
+Purpose
+Lists all local branches in the repository.
+Example
+git branch
+
+2. git branch -a
+
+Syntax
+git branch -a
+Purpose
+Lists all branches including local and remote branches.
+Example
+git branch -a
+
+3. git branch -d
+
+Syntax
+git branch -d branch-name
+Purpose
+Deletes a branch safely (only if it is already merged).
+Example
+git branch -d testbranch
+
+4. git branch -D
+
+Syntax
+git branch -D branch-name
+Purpose
+Force deletes a branch even if it is not merged.
+Example
+git branch -D testbranch
+
+5. git checkout
+
+Syntax
+git checkout branch-name
+Purpose
+Switches to an existing branch.
+Example
+git checkout main
+
+6. git checkout -b
+
+Syntax
+git checkout -b branch-name
+Purpose
+Creates a new branch and switches to it.
+Example
+git checkout -b feature-login
+
+7. git switch
+
+Syntax
+git switch branch-name
+Purpose
+Switches to an existing branch (modern alternative to checkout).
+Example
+git switch main
+
+8. git switch -c
+
+Syntax
+git switch -c branch-name
+Purpose
+Creates a new branch and switches to it (modern method).
+Example
+git switch -c feature-dashboard
+
+screesnshot 
+![alt text](<branch commands.png>)
+
+### merge and integration
+1. git merge
+
+Syntax
+git merge branch-name
+Purpose
+Merges the specified branch into the current branch.
+Example
+git merge feature-login
+
+2. git merge --no-ff
+
+Syntax
+git merge --no-ff branch-name
+Purpose
+Performs a merge without fast-forwarding, creating a separate merge commit to preserve branch history.
+Example
+git merge --no-ff feature-login
+
+
+### remote repository commands
+1. git remote
+
+Syntax
+git remote
+Purpose
+Displays the names of remote repositories connected to the project.
+Example
+git remote
+
+2. git remote -v
+
+Syntax
+git remote -v
+Purpose
+Shows remote repository URLs along with their names.
+Example
+git remote -v
+
+3. git remote add
+
+Syntax
+git remote add origin repository-url
+Purpose
+Adds a new remote repository.
+Example
+git remote add origin https://github.com/user/project.git
+
+4. git remote remove
+
+Syntax
+git remote remove remote-name
+Purpose
+Removes a remote repository connection.
+Example
+git remote remove origin
+
+5. git fetch
+
+Syntax
+git fetch
+Purpose
+Downloads changes from the remote repository without merging them.
+Example
+git fetch
+
+6. git fetch --all
+
+Syntax
+git fetch --all
+Purpose
+Fetches updates from all remote repositories.
+Example
+git fetch --all
+
+7. git pull
+
+Syntax
+git pull origin branch-name
+Purpose
+Fetches and merges changes from the remote repository.
+Example
+git pull origin main
+
+8. git pull --rebase
+
+Syntax
+git pull --rebase origin branch-name
+Purpose
+Fetches changes and applies them using rebase instead of merge.
+Example
+git pull --rebase origin main
+
+9. git push
+
+Syntax
+git push origin branch-name
+Purpose
+Uploads local commits to the remote repository.
+Example
+git push origin main
+
+10. git push -u origin branch-name
+
+Syntax
+git push -u origin branch-name
+Purpose
+Pushes the branch and sets upstream tracking.
+Example
+git push -u origin feature-login
+
+11. git push --force
+
+Syntax
+git push --force
+Purpose
+Forces pushing changes, overwriting remote history.
+Example
+git push --force
+![alt text](remote1.png)
+
+
+### stash commands
+1. git stash
+
+Syntax
+git stash
+Purpose
+Temporarily saves uncommitted changes so you can work on something else.
+Example
+git stash
+
+2. git stash list
+
+Syntax
+git stash list
+Purpose
+Displays all saved stashes.
+Example
+git stash list
+
+3. git stash pop
+
+Syntax
+git stash pop
+Purpose
+Applies the latest stash and removes it from the stash list.
+Example
+git stash pop
+
+4. git stash apply
+
+Syntax
+git stash apply
+Purpose
+Applies a stash without removing it from the stash list.
+Example
+git stash apply
+
+5. git stash drop
+
+Syntax
+git stash drop
+Purpose
+Deletes a specific stash from the list.
+Example
+git stash drop stash@{0}
+
+6. git stash clear
+
+Syntax
+git stash clear
+Purpose
+Removes all stashes permanently.
+Example
+git stash clear
+
+![alt text](stash.png)
+
+
+### reset and undo commands
+1. git reset
+
+Syntax
+git reset <commit-id>
+Purpose
+Resets the current HEAD to a specified commit.
+Example
+git reset abc123
+
+2. git reset --soft
+
+Syntax
+git reset --soft <commit-id>
+Purpose
+Moves HEAD to the specified commit but keeps changes in the staging area.
+Example
+git reset --soft HEAD~1
+
+3. git reset --mixed
+
+Syntax
+git reset --mixed <commit-id>
+Purpose
+Moves HEAD to the specified commit and unstages the changes but keeps them in the working directory.
+Example
+git reset --mixed HEAD~1
+
+4. git reset --hard
+
+Syntax
+git reset --hard <commit-id>
+Purpose
+Resets everything (HEAD, staging, working directory) and deletes all changes.
+Example
+git reset --hard HEAD~1
+
+5. git revert
+
+Syntax
+git revert <commit-id>
+Purpose
+Creates a new commit that undoes the changes of a previous commit.
+Example
+git revert abc123
+
+6. git clean -f
+
+Syntax
+git clean -f
+Purpose
+Removes untracked files from the working directory.
+Example
+git clean -f
+
+7. git clean -fd
+
+Syntax
+git clean -fd
+Purpose
+Removes untracked files and directories.
+Example
+git clean -fd
+![alt text](image.png)
