@@ -1,0 +1,6 @@
+[submodule "demo"]
+	path = demo
+	url = https://github.com/VIKRAM-N220575/demo.git
+[submodule "roleplay"]
+	path = roleplay
+	url = https://github.com/VIKRAM-N220575/roleplay.git

@@ -597,3 +597,187 @@ Removes untracked files and directories.
 Example
 git clean -fd
 ![alt text](image.png)
+
+
+### rebase
+1. git rebase
+
+Syntax
+git rebase branch-name
+Purpose
+Reapplies commits from the current branch onto another branch, creating a linear history.
+Example
+git rebase main
+
+2. git rebase -i
+
+Syntax
+git rebase -i <commit-id>
+Purpose
+Starts an interactive rebase to edit, squash, or reorder commits.
+Example
+git rebase -i HEAD~3
+
+3. git rebase --continue
+
+Syntax
+git rebase --continue
+Purpose
+Continues the rebase process after resolving conflicts.
+Example
+git rebase --continue
+
+4. git rebase --abort
+
+Syntax
+git rebase --abort
+Purpose
+Cancels the rebase process and restores the branch to its previous state.
+Example
+git rebase --abort
+
+![alt text](image-1.png)
+
+
+### cherry pick
+1. git cherry-pick
+
+Syntax
+git cherry-pick <commit-id>
+Purpose
+Applies a specific commit from one branch to another branch.
+Example
+git cherry-pick abc123
+
+2. git format-patch
+
+Syntax
+git format-patch <commit-id>
+Purpose
+Creates patch files from commits that can be shared or applied elsewhere.
+Example
+git format-patch HEAD~1
+
+3. git apply
+
+Syntax
+git apply <patch-file>
+Purpose
+Applies changes from a patch file to the working directory without creating a commit.
+Example
+git apply 0001-change.patch
+
+4. git am
+
+Syntax
+git am <patch-file>
+Purpose
+Applies a patch file and creates a commit from it.
+Example
+git am 0001-change.patch
+![alt text](image-2.png)
+
+### tags
+1. git tag
+
+Syntax
+git tag
+Purpose
+Lists all tags in the repository.
+Example
+git tag
+
+2. git tag -a
+
+Syntax
+git tag -a tag-name -m "message"
+Purpose
+Creates an annotated tag with a message.
+Example
+git tag -a v1.0 -m "First release"
+
+3. git tag -d
+
+Syntax
+git tag -d tag-name
+Purpose
+Deletes a tag from the local repository.
+Example
+git tag -d v1.0
+
+4. git push origin --tags
+
+Syntax
+git push origin --tags
+Purpose
+Pushes all local tags to the remote repository.
+Example
+git push origin --tags
+
+![alt text](image-3.png)
+
+1. git submodule add
+
+Syntax
+git submodule add <repository-url>
+Purpose
+Adds another Git repository as a submodule inside your current repository.
+Example
+git submodule add https://github.com/user/library.git
+
+2. git submodule init
+
+Syntax
+git submodule init
+Purpose
+Initializes submodules after cloning a repository that contains them.
+Example
+git submodule init
+
+3. git submodule update
+
+Syntax
+git submodule update
+Purpose
+Fetches and checks out the content of submodules.
+Example
+git submodule update
+![alt text](image-4.png)
+
+1. git bisect
+
+Syntax
+git bisect
+Purpose
+Helps find the commit that introduced a bug using binary search.
+Example
+git bisect
+
+2. git bisect start
+
+Syntax
+git bisect start
+Purpose
+Starts the bisect process to locate a faulty commit.
+Example
+git bisect start
+
+3. git bisect good
+
+Syntax
+git bisect good <commit-id>
+Purpose
+Marks a commit as good (no bug present).
+Example
+git bisect good abc123
+
+4. git bisect bad
+
+Syntax
+git bisect bad <commit-id>
+Purpose
+Marks a commit as bad (bug present).
+Example
+git bisect bad def456
+
+![alt text](image-5.png)
