@@ -780,4 +780,4 @@ Marks a commit as bad (bug present).
 Example
 git bisect bad def456
 
-![alt text](image-5.png)
+![](image-5.png)
